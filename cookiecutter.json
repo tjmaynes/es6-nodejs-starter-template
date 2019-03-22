@@ -1,0 +1,14 @@
+
+{
+  "author_name": "TJ Maynes",
+  "author_email": "tjmaynes@gmail.com",
+  "author_git_username": "tjmaynes",
+  "project_name": "Minimal ES6 NodeJS Template",
+  "project_short_description": "Minimal template for building ES6-based Nodejs projects.",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_module_name": "{{ cookiecutter.project_name.title().replace(' ', '').replace('-', '').replace('_', '') }}",
+  "project_license": "MIT",
+  "project_url": "https://github.com/{{cookiecutter.author_git_username}}/{{cookiecutter.project_slug}}",
+  "project_git_url": "git@github.com:{{cookiecutter.author_git_username}}/{{cookiecutter.project_name.lower().replace(' ', '-')}}.git",
+  "project_version": "0.1.0"
+}
