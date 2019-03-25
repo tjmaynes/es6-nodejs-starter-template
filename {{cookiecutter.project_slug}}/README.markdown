@@ -17,13 +17,3 @@ To run all tests, run the following command:
 ```bash
 npm test
 ```
-
-To run integration tests only, run the following command:
-```bash
-npm run test:integration
-```
-
-To run unit tests only, run the following command:
-```bash
-npm run test:unit
-```
