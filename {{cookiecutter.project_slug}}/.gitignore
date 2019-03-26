@@ -13,3 +13,7 @@ dist/
 # Editor
 .idea/
 .vscode/
+
+# Test Coverage
+.nyc_output/
+coverage/

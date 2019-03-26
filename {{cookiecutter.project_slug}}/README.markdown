@@ -2,6 +2,8 @@
 
 > {{cookiecutter.project_short_description}}
 
+[![CircleCI](https://circleci.com/gh/{{cookiecutter.author_git_username}}/{{cookiecutter.project_slug}}.svg?style=svg)](https://circleci.com/gh/{{cookiecutter.author_git_username}}/{{cookiecutter.project_slug}})
+
 ## Requirements
 
 - [nodejs](https://nodejs.org/en/)
