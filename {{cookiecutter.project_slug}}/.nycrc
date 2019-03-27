@@ -1,17 +1,11 @@
 {
     "all": true,
+    "check-coverage": true,
     "include": [
       "src/**/*.js"
     ],
     "exclude": [
-      "coverage/**",
-      "packages/*/test/**",
-      "test/**",
-      "test{,-*}.js",
-      "**/*{.,-}spec.js",
-      "**/__tests__/**",
-      "**/node_modules/**",
-      "**/babel.config.js"
+      "**/*.spec.js"
     ],
     "reporter": [
       "lcov",
@@ -22,5 +16,5 @@
       "@babel/register"
     ],
     "sourceMap": false,
-    "instrument": false
+    "cache": false
   }

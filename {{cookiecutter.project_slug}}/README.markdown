@@ -19,3 +19,13 @@ To run all tests, run the following command:
 ```bash
 npm test
 ```
+
+To run test coverage tool, run the following command:
+```bash
+npm run test:coverage
+```
+
+To get test coverage report from last test coverage run, run the following command:
+```bash
+npm run test:report
+```
