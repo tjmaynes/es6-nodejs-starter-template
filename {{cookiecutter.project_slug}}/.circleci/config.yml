@@ -10,7 +10,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
+            {% raw %}
             - v1-dependencies-{{ checksum "package.json" }}
+            {% endraw %}
             - v1-dependencies-
       - run:
           name: Install Project Dependencies
@@ -18,7 +20,9 @@ jobs:
       - save_cache:
           paths:
             - node_modules
+          {% raw %}
           key: v1-dependencies-{{ checksum "package.json" }}
+          {% endraw %}
       - run:
           name: Run Tests
           command: npm run test:coverage
