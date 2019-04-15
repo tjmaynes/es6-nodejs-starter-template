@@ -1,6 +1,6 @@
-# Minimal ES6 NodeJS Template
+# ES6 NodeJS Starter Template
 
-> Minimal template for creating a nodejs project with ES6 support via Babel/Webpack.
+> Cookiecutter template for creating a nodejs project with ES6 support via Babel/Webpack.
 
 ## Requirements
 
