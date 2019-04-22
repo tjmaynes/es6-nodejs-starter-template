@@ -25,12 +25,13 @@ jobs:
           {% endraw %}
       - run:
           name: Run Tests
-          command: npm run test:coverage
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
+          command: npm run test:ci
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - run:
+          name: Run Linter
+          command: npm run linter
       - store_test_results:
-          path: test-results.xml
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
