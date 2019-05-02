@@ -3,6 +3,10 @@
   "version": "{{cookiecutter.project_version}}",
   "description": "{{cookiecutter.project_short_description}}",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "{{cookiecutter.project_git_url}}"
+  },
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/jest",
     "test:watch": "npm run test -- --watch",
