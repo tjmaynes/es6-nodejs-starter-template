@@ -12,15 +12,15 @@
 To install cookiecutter, run the following command:
 ```bash
 pip3 install cookiecutter
-git clone https://github.com/tjmaynes/minimal-es6-nodejs-template
+git clone https://github.com/tjmaynes/es6-nodejs-starter-template
 ```
 
 To generate a new project using cli args (with defaults), run the following command:
 ```bash
-cookiecutter --no-input minimal-es6-nodejs-template
+cookiecutter --no-input es6-nodejs-starter-template
 ```
 
 To generate a new project using cli questions, run the following command:
 ```bash
-cookiecutter minimal-es6-nodejs-template
+cookiecutter es6-nodejs-starter-template
 ```
