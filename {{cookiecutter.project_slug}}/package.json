@@ -8,13 +8,16 @@
     "url": "{{cookiecutter.project_git_url}}"
   },
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/.bin/jest",
+    "lint:js": "eslint . && prettier-eslint --list-different src/**/*.js",
+    "lint": "npm run lint:js",
+    "format": "prettier-eslint --write src/**/*.js",
+    "test": "NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
     "test:ci": "npm run test -- --ci --runInBand",
     "serve": "node dist/bundle.js",
-    "build:dev": "BABEL_ENV=development ./node_modules/.bin/webpack --config webpack.config.js --mode development --progress --colors",
-    "build:prod": "BABEL_ENV=production ./node_modules/.bin/webpack --mode production"
+    "build:dev": "BABEL_ENV=development webpack --config webpack.config.js --mode development --progress --colors",
+    "build:prod": "BABEL_ENV=production webpack --mode production"
   },
   "author": "{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>",
   "license": "{{cookiecutter.project_license}}",
@@ -22,40 +25,22 @@
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.7.1",
     "jest-junit": "^6.3.0",
-    "sinon": "^7.2.3",
+    "prettier-eslint-cli": "^4.7.1",
+    "stylelint": "^10.1.0",
     "supertest": "^3.4.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env", {
-          "targets": {
-            "node": "10"
-          }
-        }
-      ]
-    ]
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "reporters": [
-      "default",
-      "jest-junit"
-    ]
   }
 }

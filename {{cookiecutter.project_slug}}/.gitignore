@@ -17,3 +17,6 @@ dist/
 # Test Coverage
 .nyc_output/
 coverage/
+
+# JUnit
+*.xml
